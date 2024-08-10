@@ -1163,40 +1163,45 @@
     };
 
     const app = initializeApp(firebaseConfig);
-
     const db = getDatabase(app);
-
-    function createLoiChuc(data) {
-      const bigDiv = document.createElement('div');
-      bigDiv.className = 'wish-box-item';
-      const strong = document.createElement('strong');
-      strong.textContent = data.tenCuaBan;
-      const p = document.createElement('p');
-      p.textContent = data.loiChuc;
-      bigDiv.appendChild(strong);
-      bigDiv.appendChild(p);
-      danhSachLoiChuc.appendChild(bigDiv);
-    }
-
     const dbRef = ref(db, 'loiChucs');
+    const loichucs = [];
+
     onValue(dbRef, (snapshot) => {
       snapshot.forEach(element => {
         const loiChuc = element.val();
-        createLoiChuc(loiChuc);
-        loichuc.push(loiChuc);
+        if(loichucs.find((item) => item.id === loiChuc.id)){
+          return;
+        }
+        const bigDiv = document.createElement('div');
+        bigDiv.className = 'wish-box-item';
+        const strong = document.createElement('strong');
+        strong.textContent = loiChuc.tenCuaBan;
+        const p = document.createElement('p');
+        p.textContent = loiChuc.loiChuc;
+        bigDiv.appendChild(strong);
+        bigDiv.appendChild(p);
+        danhSachLoiChuc.prepend(bigDiv);
+        loichucs.push(loiChuc);
       });
     })
-    const loichuc = [];
 
     document.getElementById('guiLoiChuc').addEventListener('click', function (e) {
       e.preventDefault();
-      set(ref(db, `loiChucs/${loichuc.length + 1}`), {
-        tenCuaBan: document.querySelector('#tenCuaBan').value,
-        loiChuc: document.querySelector('#content').value
-      })
+      const tenCuaBan = document.querySelector('#tenCuaBan').value;
+      const loiChuc = document.querySelector('#content').value;
+      if( tenCuaBan && loiChuc ) {
+        set(ref(db, `loiChucs/${loichucs.length + 1}`), {
+          id: loichucs.length + 1,
+          tenCuaBan,
+          loiChuc
+        });
+        document.querySelector('#tenCuaBan').value = '';
+        document.querySelector('#content').value = '';
+      }
     })
   </script>
-  <script>
+  <!-- <script>
     document.querySelector('#guiLoiChuc').addEventListener('click', () => {
       const tenCuaBan = document.querySelector('#tenCuaBan').value;
       const loiChuc = document.querySelector('#content').value;
@@ -1210,7 +1215,7 @@
       bigDiv.appendChild(p);
       danhSachLoiChuc.appendChild(bigDiv);
     });
-  </script>
+  </script> -->
 </body>
 
 </html>

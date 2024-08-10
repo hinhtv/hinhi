@@ -402,30 +402,19 @@ var Neela;
                     rules: {
                         name: {
                             required: true,
-                            minlength: 5
                         },
                         content: {
                             required: true,
-                            minlength: 10
-                        },
-                        email: {
-                            required: false,
-                            email: true
                         },
                     },
         
                     messages: {
                         name: {
                             required: 'Vui lòng nhập tên của bạn.',
-                            minlength: 'Tên phải lớn hơn 5 ký tự.',
                         },
                         content: {
                             required: 'Vui lòng nhập lời chúc.',
-                            minlength: 'Lời chúc phải lớn hơn 10 ký tự.',
                         },
-                        email: {
-                            email: 'Địa chỉ email không hợp lệ.'
-                        }
                     },
                     
                     errorPlacement: function(error, element) {
