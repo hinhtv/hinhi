@@ -14,7 +14,7 @@
   <meta property="og:title" content="Xuân Hinh  &amp; Hà Nhi Wedding site!" />
   <meta property="og:url" content="https://hinhtv.github.io/hinhi/" />
   <meta property="og:description" content="Xuân Hinh  &amp; Hà Nhi - Our wedding date: 2024-09-18" />
-  <meta property="og:image" content="favicon.ico" />
+  <meta property="og:image" content="https://hinhtv.github.io/hinhi/favicon.ico" />
   <meta property="og:image:url" content="https://hinhtv.github.io/hinhi/favicon.ico" />
   <meta property="og:image:secure_url" content="https://hinhtv.github.io/hinhi/favicon.ico" />
   <!-- Fav and touch icons -->
@@ -441,7 +441,7 @@
               <div class="grid grid-item btn-see-more-gallery" data-index="3">
                 <img src="images/small_3.jpg" alt="" class="img img-responsive" />
               </div>
-              
+
               <div class="grid grid-item btn-see-more-gallery" data-index="0">
                 <img src="images/small.jpg" alt="" class="img img-responsive" />
               </div>
@@ -465,7 +465,7 @@
               <div class="grid grid-item btn-see-more-gallery" data-index="5">
                 <img src="images/small_8.jpg" alt="" class="img img-responsive" />
               </div>
-              
+
               <div class="grid grid-item btn-see-more-gallery" data-index="9">
                 <img src="images/small_9.jpg" alt="" class="img img-responsive" />
               </div>
@@ -478,7 +478,7 @@
                   subHtml: `<div class="lg-sub-html"><h4></h4></div>`,
                 });
               </script>
-              
+
               <script type="text/javascript">
                 photoGalleries.push({
                   src: "images/banner2.jpg",
@@ -487,7 +487,7 @@
                   subHtml: `<div class="lg-sub-html"><h4></h4></div>`,
                 });
               </script>
-              
+
               <script type="text/javascript">
                 photoGalleries.push({
                   src: "images/groomsmen-background.jpg",
@@ -496,7 +496,7 @@
                   subHtml: `<div class="lg-sub-html"><h4></h4></div>`,
                 });
               </script>
-              
+
               <script type="text/javascript">
                 photoGalleries.push({
                   src: "images/small.jpg",
@@ -842,12 +842,12 @@
               <h1 class="section-title">Sổ Lưu Bút</h1>
               <form id="wish-form" class="form validate-rsvp-form row contact-validation-active" method="post">
                 <div>
-                  <input type="text" name="name" placeholder="Tên của bạn*" class="form-control" />
+                  <input id="tenCuaBan" type="text" name="name" placeholder="Tên của bạn*" class="form-control" />
                 </div>
 
-                <div>
+                <!-- <div>
                   <input type="email" name="email" placeholder="E-mail" class="form-control" />
-                </div>
+                </div> -->
                 <div>
                   <div class="textarea-emoji-picker">
                     <div class="vitualTextarea">
@@ -871,159 +871,93 @@
                             </path>
                           </svg>
                         </span>
-                        <span class="emoji-picker-button tooltip-custom" data-toggle="tooltip" data-placement="top"
-                          title="Chèn biểu tượng">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                            class="bi bi-emoji-smile" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"></path>
-                            <path
-                              d="M4.285 9.567a.5.5 0 0 1 .683.183A3.5 3.5 0 0 0 8 11.5a3.5 3.5 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5m4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5">
-                            </path>
-                          </svg>
-                        </span>
                         <div class="wishes-autocomplete-content" style="display: none">
                           <input type="text" id="searchWishSuggestions" onkeyup="searchWishSuggestionsFunction()"
                             placeholder="Tìm kiếm..." />
                           <ul id="wishSuggestions">
                             <li>
-                              <a class="showContent" href="#">Chúc mừng hạnh phúc! Chúc hai bạn trăm năm
-                                hạnh phúc!</a>
+                              <a class="showContent" href="#">Chúc mừng hạnh phúc! Chúc hai bạn trăm năm hạnh phúc!</a>
                             </li>
                             <li>
-                              <a class="showContent" href="#">Chúc mừng ngày trọng đại tới hai bạn. Hạnh
-                                phúc bền lâu và trọn vẹn nhé!</a>
+                              <a class="showContent" href="#">Chúc mừng ngày trọng đại tới hai bạn. Hạnh phúc bền lâu và trọn vẹn nhé!</a>
                             </li>
                             <li>
-                              <a class="showContent" href="#">Chúc mừng hạnh phúc hai bạn. Chúc hai bạn bên
-                                nhau đầu bạc răng long, sớm có thiên thần nhỏ
-                                nhé!</a>
+                              <a class="showContent" href="#">Chúc mừng hạnh phúc hai bạn. Chúc hai bạn bên nhau đầu bạc răng long, sớm có thiên thần nhỏ nhé!</a>
                             </li>
                             <li>
-                              <a class="showContent" href="#">Chúc hai bạn ngày vui hạnh phúc. Hãy yêu
-                                thương nhau thật nhiều và sống thật hạnh phúc
-                                nha!</a>
+                              <a class="showContent" href="#">Chúc hai bạn ngày vui hạnh phúc. Hãy yêu thương nhau thật nhiều và sống thật hạnh phúc nha!</a>
                             </li>
                             <li>
-                              <a class="showContent" href="#">Chúc hai bạn sớm có con đàn cháu đống, cửa
-                                nhà lúc nào cũng đầm ấm, yên vui nhé!</a>
+                              <a class="showContent" href="#">Chúc hai bạn sớm có con đàn cháu đống, cửa nhà lúc nào cũng đầm ấm, yên vui nhé!</a>
                             </li>
                             <li>
-                              <a class="showContent" href="#">Thật vui vì cuối cùng ngày này cũng tới với
-                                bạn. Tôi thành tâm chúc hai bạn thật nhiều
-                                hạnh phúc và sống đời vui vẻ cùng nhau mãi
-                                mãi!</a>
+                              <a class="showContent" href="#">Thật vui vì cuối cùng ngày này cũng tới với bạn. Tôi thành tâm chúc hai bạn thật nhiều hạnh phúc và sống đời vui vẻ cùng nhau mãi mãi!</a>
                             </li>
                             <li>
-                              <a class="showContent" href="#">Một chương mới đã mở ra với hai bạn rồi. Tôi
-                                mong cuộc sống mới của cả hai sẽ tràn ngập hy
-                                vọng, hạnh phúc và niềm vui!</a>
+                              <a class="showContent" href="#">Một chương mới đã mở ra với hai bạn rồi. Tôi mong cuộc sống mới của cả hai sẽ tràn ngập hy vọng, hạnh phúc và niềm vui!</a>
                             </li>
                             <li>
-                              <a class="showContent" href="#">Chúc đôi trai tài gái sắc hạnh phúc trọn vẹn,
-                                luôn yêu thương nhau thật nhiều!</a>
+                              <a class="showContent" href="#">Chúc đôi trai tài gái sắc hạnh phúc trọn vẹn, luôn yêu thương nhau thật nhiều!</a>
                             </li>
                             <li>
-                              <a class="showContent" href="#">Chia vui cùng bạn trong ngày trọng đại này.
-                                Cầu mong cuộc sống sau này của 2 vợ chồng thật
-                                thuận hòa, may mắn, làm ăn phát tài nha.</a>
+                              <a class="showContent" href="#">Chia vui cùng bạn trong ngày trọng đại này. Cầu mong cuộc sống sau này của 2 vợ chồng thật thuận hòa, may mắn, làm ăn phát tài nha.</a>
                             </li>
                             <li>
-                              <a class="showContent" href="#">Tôi mong tình yêu của hai bạn thật bền chặt,
-                                gắn bó để xây dựng tổ ấm yên bình, hạnh
-                                phúc!</a>
+                              <a class="showContent" href="#">Tôi mong tình yêu của hai bạn thật bền chặt, gắn bó để xây dựng tổ ấm yên bình, hạnh phúc!</a>
                             </li>
                             <li>
-                              <a class="showContent" href="#">Hai bạn của tôi chắc chắn sẽ có được nhiều
-                                hạnh phúc. Mong hai bạn có sức khỏe dồi dào,
-                                làm ăn phát đạt và sớm có cháu cho ông bà bồng
-                                bế nhé!</a>
+                              <a class="showContent" href="#">Hai bạn của tôi chắc chắn sẽ có được nhiều hạnh phúc. Mong hai bạn có sức khỏe dồi dào, làm ăn phát đạt và sớm có cháu cho ông bà bồng bế nhé!</a>
                             </li>
                             <li>
-                              <a class="showContent" href="#">Gửi lời chúc mừng chân thành nhất tới bạn của
-                                tôi. Chúc hai bạn một cuộc sống thật tuyệt
-                                vời, hòa thuận, gắn bó son sắt, thủy chung,
-                                hạnh phúc lâu dài.</a>
+                              <a class="showContent" href="#">Gửi lời chúc mừng chân thành nhất tới bạn của tôi. Chúc hai bạn một cuộc sống thật tuyệt vời, hòa thuận, gắn bó son sắt, thủy chung, hạnh phúc lâu dài.</a>
                             </li>
                             <li>
-                              <a class="showContent" href="#">Nơi nào có yêu thương nơi đó chắc chắn hạnh
-                                phúc. Hai bạn đã tìm được nơi đủ đầy yêu
-                                thương rồi, hãy cùng nắm tay nhau đi hết cuộc
-                                đời nhé!</a>
+                              <a class="showContent" href="#">Nơi nào có yêu thương nơi đó chắc chắn hạnh phúc. Hai bạn đã tìm được nơi đủ đầy yêu thương rồi, hãy cùng nắm tay nhau đi hết cuộc đời nhé!</a>
                             </li>
                             <li>
-                              <a class="showContent" href="#">Khởi đầu một cuộc sống mới, nguyện ước cho
-                                bạn của tôi những ngày tháng hạnh phúc phía
-                                trước để cùng xây dựng tổ ấm với người bạn
-                                đời. Happy ending!</a>
+                              <a class="showContent" href="#">Khởi đầu một cuộc sống mới, nguyện ước cho bạn của tôi những ngày tháng hạnh phúc phía trước để cùng xây dựng tổ ấm với người bạn đời. Happy ending!</a>
                             </li>
                             <li>
-                              <a class="showContent" href="#">Mình tin rằng đây sẽ là khởi đầu cho những
-                                điều tốt đẹp sắp tới trong cuộc sống của hai
-                                bạn. Hãy yêu thương và cùng nhau vượt qua mọi
-                                khó khăn trong cuộc sống nhé.</a>
+                              <a class="showContent" href="#">Mình tin rằng đây sẽ là khởi đầu cho những điều tốt đẹp sắp tới trong cuộc sống của hai bạn. Hãy yêu thương và cùng nhau vượt qua mọi khó khăn trong cuộc sống nhé.</a>
                             </li>
                             <li>
-                              <a class="showContent" href="#">Hôn nhân đánh dấu sự kết thúc một câu chuyện
-                                tình yêu và bắt đầu một trận đấu vật. Chúc bạn
-                                những điều tốt đẹp nhất.</a>
+                              <a class="showContent" href="#">Hôn nhân đánh dấu sự kết thúc một câu chuyện tình yêu và bắt đầu một trận đấu vật. Chúc bạn những điều tốt đẹp nhất.</a>
                             </li>
                             <li>
-                              <a class="showContent" href="#">Tôi sẽ nói cho bạn bí mật của một cuộc hôn
-                                nhân hạnh phúc. Đó vẫn là … một bí mật cho tất
-                                cả! Chúc bạn tất cả những điều tốt đẹp nhất
-                                của thời gian phía trước.</a>
+                              <a class="showContent" href="#">Tôi sẽ nói cho bạn bí mật của một cuộc hôn nhân hạnh phúc. Đó vẫn là … một bí mật cho tất cả! Chúc bạn tất cả những điều tốt đẹp nhất của thời gian phía trước.</a>
                             </li>
                             <li>
-                              <a class="showContent" href="#">Hôn nhân thật đẹp. Cuối cùng bạn đã tìm thấy
-                                một người mà bạn bị làm phiền suốt cuộc
-                                đời.</a>
+                              <a class="showContent" href="#">Hôn nhân thật đẹp. Cuối cùng bạn đã tìm thấy một người mà bạn bị làm phiền suốt cuộc đời.</a>
                             </li>
                             <li>
-                              <a class="showContent" href="#">Hai trở thành một: Một giường, một điều khiển
-                                từ xa, một phòng tắm! Xin chúc mừng đám cưới
-                                hai bạn.</a>
+                              <a class="showContent" href="#">Hai trở thành một: Một giường, một điều khiển từ xa, một phòng tắm! Xin chúc mừng đám cưới hai bạn.</a>
                             </li>
                             <li>
-                              <a class="showContent" href="#">Chúc đôi trai tài gái sắc nhà mình hạnh phúc
-                                vẹn tròn, cung hỷ cung hỷ!</a>
+                              <a class="showContent" href="#">Chúc đôi trai tài gái sắc nhà mình hạnh phúc vẹn tròn, cung hỷ cung hỷ!</a>
                             </li>
                             <li>
-                              <a class="showContent" href="#">Chúc mừng anh trai của em đã có người rước
-                                nhé. Em mong anh chị có cuộc sống vui vẻ, hạnh
-                                phúc phía trước, làm ăn phát tài phát lộc.</a>
+                              <a class="showContent" href="#">Chúc mừng anh trai của em đã có người rước nhé. Em mong anh chị có cuộc sống vui vẻ, hạnh phúc phía trước, làm ăn phát tài phát lộc.</a>
                             </li>
                             <li>
-                              <a class="showContent" href="#">Anh chị là một cặp trời sinh, chắc chắn sau
-                                này sẽ rất hạnh phúc. Em chúc anh chị sức khỏe
-                                dồi dào, làm ăn phát đạt và sớm có thiên thần
-                                nhỏ cho vui cửa vui nhà.</a>
+                              <a class="showContent" href="#">Anh chị là một cặp trời sinh, chắc chắn sau này sẽ rất hạnh phúc. Em chúc anh chị sức khỏe dồi dào, làm ăn phát đạt và sớm có thiên thần nhỏ cho vui cửa vui nhà.</a>
                             </li>
                             <li>
-                              <a class="showContent" href="#">Hôm nay là ngày vui của anh chị và cũng là
-                                ngày em rất hạnh phúc. Chúc anh chị mãi yêu
-                                thương nhau như bây giờ và đạt được mọi ước
-                                nguyện trong cuộc sống.</a>
+                              <a class="showContent" href="#">Hôm nay là ngày vui của anh chị và cũng là ngày em rất hạnh phúc. Chúc anh chị mãi yêu thương nhau như bây giờ và đạt được mọi ước nguyện trong cuộc sống.</a>
                             </li>
                             <li>
-                              <a class="showContent" href="#">Chúc anh/chị/em trăm năm hạnh phúc, thuận vợ
-                                thuận chồng.</a>
+                              <a class="showContent" href="#">Chúc anh/chị/em trăm năm hạnh phúc, thuận vợ thuận chồng.</a>
                             </li>
                             <li>
-                              <a class="showContent" href="#">Hôm nay chú rể đẹp trai, cô dâu xinh gái.
-                                Chúc mừng ngày thành hôn hai bạn tôi!</a>
+                              <a class="showContent" href="#">Hôm nay chú rể đẹp trai, cô dâu xinh gái. Chúc mừng ngày thành hôn hai bạn tôi!</a>
                             </li>
                             <li>
-                              <a class="showContent" href="#">Chúc mừng đôi bạn trẻ nhé! Mãi yêu thương
-                                nhau đến đầu bạc răng long bạn nha!</a>
+                              <a class="showContent" href="#">Chúc mừng đôi bạn trẻ nhé! Mãi yêu thương nhau đến đầu bạc răng long bạn nha!</a>
                             </li>
                             <li>
-                              <a class="showContent" href="#">Thay mặt team (tên nhóm) chúc hai bạn ngày
-                                ngày ân ái, bên nhau trọn đời.</a>
+                              <a class="showContent" href="#">Thay mặt team (tên nhóm) chúc hai bạn ngày ngày ân ái, bên nhau trọn đời.</a>
                             </li>
                             <li>
-                              <a class="showContent" href="#">Happy wedding! Chúc hai bạn có cuộc sống mới
-                                ngập tràn tiếng cười và niềm vui, sớm có thiên
-                                thần nhỏ bồng bé!</a>
+                              <a class="showContent" href="#">Happy wedding! Chúc hai bạn có cuộc sống mới ngập tràn tiếng cười và niềm vui, sớm có thiên thần nhỏ bồng bé!</a>
                             </li>
                           </ul>
                         </div>
@@ -1037,101 +971,26 @@
                 </div>
 
                 <div class="center">
-                  <button type="submit" class="btn btn-primary submit_form">
+                  <button id="guiLoiChuc" class="btn btn-primary submit_form">
                     Gửi lời chúc
                   </button>
                 </div>
                 <div class="clearfix error-handling-messages">
                   <div id="success">Thank you</div>
-                  <div id="error">
+                  <!-- <div id="error">
                     Error occurred while sending email. Please try again
                     later.
-                  </div>
+                  </div> -->
                 </div>
               </form>
-              <div class="wish-box">
-                <div class="wish-box-item">
+              <div id="danhSachLoiChuc" class="wish-box">
+                <!-- <div class="wish-box-item">
                   <strong>Tân Đỗ</strong>
                   <p>
                     Chúc hai bạn trăm năm hạnh phúc trọn tình vẹn nghĩa phu
                     thê❤️
                   </p>
-                </div>
-                <div class="wish-box-item">
-                  <strong>Minh Long Bùi</strong>
-                  <p>
-                    Người bạn gắn bó từ những ngày đầu đại học cuối cùng đã
-                    tới bến bờ hạnh phúc. Chúc mừng bạn tôi. Trăm năm hạnh
-                    phúc nhé!
-                  </p>
-                </div>
-                <div class="wish-box-item">
-                  <strong>Hoàng Bá Tuấn</strong>
-                  <p>
-                    Chúc 2 bạn trẻ trăm năm hạnh phúc, bách niên giai lão nhé
-                    !
-                  </p>
-                </div>
-                <div class="wish-box-item">
-                  <strong>Trương Mạnh</strong>
-                  <p>Chúc mừng hạnh phúc hai bạn nhé 🎉🎉</p>
-                </div>
-                <div class="wish-box-item">
-                  <strong>Linh Trang 💋</strong>
-                  <p>
-                    Chúc mừng hạnh phúc nhé Nhung ❤️❤️❤️ Chúc m luôn nở nụ
-                    cười trên môi nha 💋. Đã xinh rồi cười còn xinh gái hơn
-                    nên cười nhiều lên nhé e 😘. Chúc b công việc sau này suôn
-                    sẻ và gặp nhìu may mắn 🍀. Chúc Nhung bước sang hành trình
-                    mới với nhiều hạnh phúc luôn trong ❤️ nhé 🥰 P/s: Bất kể
-                    sau này gặp chuyện buồn hay vui, thành công hay thất bại
-                    luôn nhớ còn có tui ở đây nghen 😗🤥😌
-                  </p>
-                </div>
-                <div class="wish-box-item">
-                  <strong>Dương Thị Trang</strong>
-                  <p>
-                    Chúc bạn yêu của tôi mãi hạnh phúc nhé🫶 Như thế nào cũng
-                    phải cười nhé iu
-                  </p>
-                </div>
-                <div class="wish-box-item">
-                  <strong>Mai xinh đẹp tuyệt trần</strong>
-                  <p>
-                    Nhun à. Chả biết chúc gì chúc cho bạn bớt suy nghĩ cho mọi
-                    người suy nghĩ cho chính mình. chúc cho b luôn vui vẻ hạnh
-                    phúc. Đẻ nhiều con thật nhiều con. Nói cảm động quá sợ b
-                    khóc nên thôi may mắn nhó
-                  </p>
-                </div>
-                <div class="wish-box-item">
-                  <strong>Doctor. Đạt Kim</strong>
-                  <p>
-                    A Bình và bạn Nhung thân mến! Sau bao lần "thăm khám" và
-                    "chẩn đoán", nay đã đến giai đoạn kê đơn thuốc hạnh phúc
-                    trọn đời cho gia đình . Liều dùng: Yêu thương mỗi ngày.
-                    Chống chỉ định: Cãi vã, giận hờn. Tác dụng phụ: Cười
-                    nhiều, sống lâu.
-                  </p>
-                </div>
-                <div class="wish-box-item">
-                  <strong>Bạn iu Thân Trọng Tấn</strong>
-                  <p>
-                    Vậy là cũng 6 năm chúng ta quen nhau từ lúc bước vào Đại
-                    học, thật sự chơi với nhau thì có lẽ cũng 3-4 năm, tôi
-                    thật sự mong bạn được hạnh phúc. Tình yêu của bạn và anh
-                    Bình thật đẹp, chúc bạn tôi sẽ luôn chìm đắm trong men say
-                    của hạnh phúc. Best wish for u
-                  </p>
-                </div>
-                <div class="wish-box-item">
-                  <strong>CEO của Biihappy</strong>
-                  <p>
-                    "Một cuộc hôn nhân thành công đòi hỏi phải yêu nhiều lần,
-                    và luôn ở cùng một người" - Chúc cho hai bạn sẽ có được
-                    một cuộc hôn nhân viên mãn, trăm năm hạnh phúc!
-                  </p>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -1288,29 +1147,69 @@
   <script src="js/calendar.js"></script>
   <script src="js/bii.js"></script>
   <script src="js/insertTextAtCursor.js"></script>
-  <script type="module" src="js/init.js"></script>
+  <!-- <script type="module" src="js/init.js"></script> -->
   <script type="module">
-    // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-analytics.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    import { getDatabase, ref, set, get, child, onValue } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-database.js";
+
     const firebaseConfig = {
-      apiKey: "AIzaSyAgcDiVYKQJYFzdHi2DLd5zo330R-5v3Rk",
-      authDomain: "xh-management-7997.firebaseapp.com",
-      projectId: "xh-management-7997",
-      storageBucket: "xh-management-7997.appspot.com",
-      messagingSenderId: "1056973865031",
-      appId: "1:1056973865031:web:bbaa4fc60460a11b7b7162",
-      measurementId: "G-1JCZJD9NMF"
+      apiKey: "AIzaSyA4lVSbCGe2WiH0y-250duD15wC2dhU0sA",
+      authDomain: "xuanhinh-hanhi.firebaseapp.com",
+      projectId: "xuanhinh-hanhi",
+      storageBucket: "xuanhinh-hanhi.appspot.com",
+      messagingSenderId: "90725322453",
+      appId: "1:90725322453:web:6aff245e10052a8c6d5c5c",
+      measurementId: "G-42H6KDZCEF"
     };
-  
-    // Initialize Firebase
+
     const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
+
+    const db = getDatabase(app);
+
+    function createLoiChuc(data) {
+      const bigDiv = document.createElement('div');
+      bigDiv.className = 'wish-box-item';
+      const strong = document.createElement('strong');
+      strong.textContent = data.tenCuaBan;
+      const p = document.createElement('p');
+      p.textContent = data.loiChuc;
+      bigDiv.appendChild(strong);
+      bigDiv.appendChild(p);
+      danhSachLoiChuc.appendChild(bigDiv);
+    }
+
+    const dbRef = ref(db, 'loiChucs');
+    onValue(dbRef, (snapshot) => {
+      snapshot.forEach(element => {
+        const loiChuc = element.val();
+        createLoiChuc(loiChuc);
+        loichuc.push(loiChuc);
+      });
+    })
+    const loichuc = [];
+
+    document.getElementById('guiLoiChuc').addEventListener('click', function (e) {
+      e.preventDefault();
+      set(ref(db, `loiChucs/${loichuc.length + 1}`), {
+        tenCuaBan: document.querySelector('#tenCuaBan').value,
+        loiChuc: document.querySelector('#content').value
+      })
+    })
+  </script>
+  <script>
+    document.querySelector('#guiLoiChuc').addEventListener('click', () => {
+      const tenCuaBan = document.querySelector('#tenCuaBan').value;
+      const loiChuc = document.querySelector('#content').value;
+      const bigDiv = document.createElement('div');
+      bigDiv.className = 'wish-box-item';
+      const strong = document.createElement('strong');
+      strong.textContent = tenCuaBan;
+      const p = document.createElement('p');
+      p.textContent = loiChuc;
+      bigDiv.appendChild(strong);
+      bigDiv.appendChild(p);
+      danhSachLoiChuc.appendChild(bigDiv);
+    });
   </script>
 </body>
 
