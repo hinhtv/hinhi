@@ -14,11 +14,11 @@
   <meta property="og:title" content="Xuân Hinh  &amp; Hà Nhi Wedding site!" />
   <meta property="og:url" content="https://hinhtv.github.io/hinhi/" />
   <meta property="og:description" content="Xuân Hinh  &amp; Hà Nhi - Our wedding date: 2024-09-18" />
-  <meta property="og:image" content="https://hinhtv.github.io/hinhi/images/thumbnail.jpg" />
+  <meta property="og:image" content="https://hinhtv.github.io/hinhi/thumbnail.jpg" />
   <meta property="og:image:width" content="600">
   <meta property="og:image:height" content="732">
-  <meta property="og:image:url" content="https://hinhtv.github.io/hinhi/images/thumbnail.jpg" />
-  <meta property="og:image:secure_url" content="https://hinhtv.github.io/hinhi/images/thumbnail.jpg" />
+  <meta property="og:image:url" content="https://hinhtv.github.io/hinhi/thumbnail.jpg" />
+  <meta property="og:image:secure_url" content="https://hinhtv.github.io/hinhi/thumbnail.jpg" />
   <!-- Fav and touch icons -->
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
   <!-- <link
@@ -1047,22 +1047,11 @@
                     Gửi lời chúc
                   </button>
                 </div>
-                <div class="clearfix error-handling-messages">
-                  <div id="success">Thank you</div>
-                  <!-- <div id="error">
-                    Error occurred while sending email. Please try again
-                    later.
-                  </div> -->
+                <div id="camon" class="center alert alert-success" role="alert">
+                  Cảm ơn bạn đã gửi lời chúc!!!
                 </div>
               </form>
               <div id="danhSachLoiChuc" class="wish-box">
-                <!-- <div class="wish-box-item">
-                  <strong>Tân Đỗ</strong>
-                  <p>
-                    Chúc hai bạn trăm năm hạnh phúc trọn tình vẹn nghĩa phu
-                    thê❤️
-                  </p>
-                </div> -->
               </div>
             </div>
           </div>
@@ -1238,7 +1227,7 @@
     const db = getDatabase(app);
     const dbRef = ref(db, 'loiChucs');
     const loichucs = [];
-
+    $('#camon').hide();
     onValue(dbRef, (snapshot) => {
       snapshot.forEach(element => {
         const loiChuc = element.val();
@@ -1268,26 +1257,13 @@
           tenCuaBan,
           loiChuc
         });
+        document.getElementById('camon').innerHTML = `Cảm ơn <span class="alert-link">"${tenCuaBan}"</span> đã gửi lời chúc!!!`;
+        $('#camon').show();
         document.querySelector('#tenCuaBan').value = '';
         document.querySelector('#content').value = '';
       }
     })
   </script>
-  <!-- <script>
-    document.querySelector('#guiLoiChuc').addEventListener('click', () => {
-      const tenCuaBan = document.querySelector('#tenCuaBan').value;
-      const loiChuc = document.querySelector('#content').value;
-      const bigDiv = document.createElement('div');
-      bigDiv.className = 'wish-box-item';
-      const strong = document.createElement('strong');
-      strong.textContent = tenCuaBan;
-      const p = document.createElement('p');
-      p.textContent = loiChuc;
-      bigDiv.appendChild(strong);
-      bigDiv.appendChild(p);
-      danhSachLoiChuc.appendChild(bigDiv);
-    });
-  </script> -->
 </body>
 
 </html>
